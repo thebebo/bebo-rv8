@@ -19,6 +19,13 @@
 			</div><!-- /.container -->
 			<footer>
 	    		<ul>
+				<span>[
+					{% for tag in page.tags %}
+						{% capture tag_name %}{{ tag }}{% endcapture %}
+						<a href="/tag/{{ tag_name }}"><code class="highligher-rouge"><nobr>{{ tag_name }}</nobr></code>&nbsp;</a>
+  					{% endfor %}	
+				]</span>
+
 	        		<li><a href="https://github.com/thebebo/bebo-rv8">Github: Bebo's RV-8 Build</a></li>
 				</ul>
 			</footer>
