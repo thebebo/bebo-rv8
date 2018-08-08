@@ -1,5 +1,5 @@
 ---
 layout: tagpage
-title: "Tag: empennage"
-tag: empennage
+title: "Tag: Empennage"
+tag: Empennage
 ---
