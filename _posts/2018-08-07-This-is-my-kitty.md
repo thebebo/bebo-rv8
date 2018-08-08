@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "This is a title"
+title: "This is my cat"
 date: 2018-08-07
 tags: cats
 ---
