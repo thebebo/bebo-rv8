@@ -8,11 +8,11 @@ cd tmp
 gdrive download -r 1h4zaiGGd-E3YC8246RdFcsGv6FViswR3
 FILECOUNT=1
 DATE=`date +%F`
-for file in Rv8/*.jpg; do
-	mv $file $DATE.$FILECOUNT.jpg
+for FILE in Rv8/*.jpg; do
+	mv $FILE $DATE.$FILECOUNT.jpg
 	FILECOUNT=$(($FILECOUNT+1))
 done
-#mv *.jpg ../pics
+mv *.jpg ../pics
 
 echo "what's the title?"
 read TITLE
@@ -55,6 +55,7 @@ echo "Time Spent: $TIME" >> post.tmp
 TITLE=$(sed 's/ /-/g' <<< "$TITLE")
 cp post.tmp ../_posts/$DATE-$TITLE.md
 
+../scripts/calculatetime.sh > ../_includes/time.html
 
 rm -rf ~/repos/bebo-rv8/tmp
 
