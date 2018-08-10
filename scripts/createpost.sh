@@ -3,16 +3,16 @@
 cd ~/repos/bebo-rv8/
 
 #Sync all new images and rename to date.
-mkdir tmp
 cd tmp
 gdrive download -r 1h4zaiGGd-E3YC8246RdFcsGv6FViswR3
+cd ..
+
 FILECOUNT=1
 DATE=`date +%F`
-for FILE in Rv8/*.jpg; do
-	mv $FILE $DATE.$FILECOUNT.jpg
+for FILE in tmp/Rv8/*.jpg; do
+	mv $FILE pics/$DATE.$FILECOUNT.jpg
 	FILECOUNT=$(($FILECOUNT+1))
 done
-mv *.jpg ../pics
 
 echo "what's the title?"
 read TITLE
@@ -26,35 +26,35 @@ read DETAILS
 echo "time spent? format: 1.25"
 read TIME
 
-echo "---" > post.tmp
-echo "layout: post" >> post.tmp
-echo "title: \"$TITLE\"" >> post.tmp
-echo "date: $DATE" >> post.tmp
-echo "tags: $TAGS" >> post.tmp
-echo '---' >> post.tmp
-echo "" >> post.tmp
-echo "$DETAILS" >> post.tmp
-echo "" >> post.tmp
-echo "Pics!" >> post.tmp
-echo "" >> post.tmp
+echo "---" > tmp/post.tmp
+echo "layout: post" >> tmp/post.tmp
+echo "title: \"$TITLE\"" >> tmp/post.tmp
+echo "date: $DATE" >> tmp/post.tmp
+echo "tags: $TAGS" >> tmp/post.tmp
+echo '---' >> tmp/post.tmp
+echo "" >> tmp/post.tmp
+echo "$DETAILS" >> tmp/post.tmp
+echo "" >> tmp/post.tmp
+echo "Pics!" >> tmp/post.tmp
+echo "" >> tmp/post.tmp
 FILEPOST=1
 until [ $FILECOUNT -eq $FILEPOST ]
 do
-	echo -n '![alt text](https://rv8bebo.com/pics/' >> post.tmp
-	echo -n $DATE.$FILEPOST >> post.tmp
-	echo -n '.jpg "Image ' >> post.tmp
-	echo -n $FILEPOST >> post.tmp
-	echo -n '"){:height="25%" width="25%""}' >> post.tmp
-	echo "" >> post.tmp
+	echo -n '![alt text](https://rv8bebo.com/pics/' >> tmp/post.tmp
+	echo -n $DATE.$FILEPOST >> tmp/post.tmp
+	echo -n '.jpg "Image ' >> tmp/post.tmp
+	echo -n $FILEPOST >> tmp/post.tmp
+	echo -n '"){:height="25%" width="25%""}' >> tmp/post.tmp
+	echo "" >> tmp/post.tmp
 	FILEPOST=$(($FILEPOST+1))
 done
-echo "" >> post.tmp
-echo "" >> post.tmp
-echo "Time Spent: $TIME" >> post.tmp
+echo "" >> tmp/post.tmp
+echo "" >> tmp/post.tmp
+echo "Time Spent: $TIME" >> tmp/post.tmp
 
 TITLE=$(sed 's/ /-/g' <<< "$TITLE")
-cp post.tmp ../_posts/$DATE-$TITLE.md
+cp tmp/post.tmp _posts/$DATE-$TITLE.md
 
-../scripts/calculatetime.sh > ../_includes/time.html
+scripts/calculatetime.sh > _includes/time.html
 
 git status && git add * && git commit -m "Blog Update" && git push
