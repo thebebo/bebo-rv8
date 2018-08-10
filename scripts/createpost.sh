@@ -57,5 +57,4 @@ cp post.tmp ../_posts/$DATE-$TITLE.md
 
 ../scripts/calculatetime.sh > ../_includes/time.html
 
-rm -rf ~/repos/bebo-rv8/tmp
-
+git status && git add * && git commit -m "Blog Update" && git push

@@ -2,7 +2,7 @@
 layout: post
 title: "Tail Kit Arrived!"
 date: 2018-08-04
-tags: Empennage Workshop
+tags: Empennage
 ---
 
 Just received my second hand NIB tail kit for an RV8. Spent the evening doing an inventory of the parts for to make sure they're here, and not damaged.
