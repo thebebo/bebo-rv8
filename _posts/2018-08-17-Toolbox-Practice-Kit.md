@@ -9,7 +9,9 @@ Spent a few hours building my shop out, then constructing the little cell phone 
 
 Took 3-4 hours working on the cell phone mount, most of it learning tools. Then 2 hours on the toolbox. Getting more used to the tools and how they work. I have the tailkit practice set from vans I'll crack open tomorrow for a third round of practice stuff.
 
-I'm very impressed with Cleaveland's basic tool set. I upgraded to the pneumatic press, worth the money for sure. I also gave them a call and got a tungsten bucking bar, some clamp clecos, and a couple other little things. Their customer support is amazing. 
+I'm very impressed with Cleaveland's basic tool set. I upgraded to the pneumatic press, worth the money for sure. I also gave them a call and got a tungsten bucking bar, some clamp clecos, and a couple other little things. Their customer support is amazing.
+
+Also tested the Napa 7220 self etching primer. Seems to go on easily and smoothly. Looks like I'll continue using it for the rest of the tail. Having a rattle can of primer makes the process easier, no mixing and not that much mess. It may not be as durable as the true two part primers, and it may be a little more expensive, but living in TX I'm not terribly concerned with heavy corrosion. My Grumman isn't primed, has lived in Kansas and Texas, was built in 1976, and has zero corrosion. 
 
 Pics!
 
